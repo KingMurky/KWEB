@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ lecture_name }}</title>
+    <link rel="stylesheet" href="{% static 'KWEB211/style.css' %}">
+</head>
+<body>
+    <div class="lecturereadTopBar">
+        <a href="{% url 'index' %}">home </a>|
+        <a href="{% url 'lecturelist' %}">강의목록</a>
+        {% if is_professor %}
+            <a href="lecturewrite/{{ lecture_id }}">| 공지 작성하기</a>
+        {% endif %}
+    </div>
+    <div class="lecturereadTitle">
+        <h1>{{ lecture_name }}</h1>
+    </div>
+    <div>
+        {% for title,content,date in new_lecture_post %}
+            <div class="lecturereadForm">
+                {{ title }}<br>
+                {{ date }}<br><br>
+                {{ content|safe }}
+            </div>
+        {% endfor %}
+    </div>
+    <br><br>
+</body>
+</html>

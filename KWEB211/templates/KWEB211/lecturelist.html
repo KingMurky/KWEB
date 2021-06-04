@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>강의목록</title>
+    <link rel="stylesheet" href="{% static 'KWEB211/style.css' %}">
+
+</head>
+<body>
+    <div class="lecturelistTopBar">
+        강의목록 |
+        <a href="{% url 'index' %}">home</a>
+    </div>
+    <div class="lecturelistTitle">
+        <h1>강의목록</h1>
+    </div>
+    <div>
+        {% for lecture_name,professor_name,semester,lecture_id in current_lecture_takes_name_list %}
+            <div class="lectureForm">
+                <a href="lectureread/{{ lecture_id }}">{{ lecture_name }}</a>
+                <div>
+                    {{ professor_name }}
+                </div>
+                <div>
+                    {{ semester }}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="previousLectureBar">
+        <h1>이전학기</h1>
+    </div>
+    <div>
+        {% for lecture_name,professor_name,semester,lecture_id in previous_lecture_takes_name_list %}
+            <div class="lectureForm">
+                <a href="lectureread/{{ lecture_id }}">{{ lecture_name }}</a>
+                <div>
+                    {{ professor_name }}
+                </div>
+                <div>
+                    {{ semester }}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

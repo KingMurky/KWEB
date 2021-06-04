@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+    <link rel="stylesheet" href="{% static 'KWEB211/style.css' %}">
+</head>
+<body>
+    <div class="loginTopBar">
+        로그인 |
+        <a href="{% url 'index' %}">home </a>|
+        <a href="{% url 'signup' %}">회원가입</a>
+    </div>
+    <div class="loginErrorMessage">
+        {% if messages %}
+            {% for message in messages %}
+                {{ message.message }}
+            {% endfor %}
+        {% endif %}
+    </div>
+    <div class="loginForm">
+        <form method="POST">
+            {% csrf_token %}
+            <div>
+                <label for="username">아이디</label>
+                <input type="text" name="username" id="username" required>
+            </div>
+            <div>
+                <label for="password">비밀번호</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <div>
+                <button type="submit">로그인</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

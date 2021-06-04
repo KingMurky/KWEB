@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>프로필 변경</title>
+    <link rel="stylesheet" href="{% static 'KWEB211/style.css' %}">
+</head>
+<body>
+    <div class="profileChangeTopBar">
+        프로필 변경 |
+        <a href="{% url 'profile' %}">프로필 </a>|
+        <a href="{% url 'index' %}">home</a>
+    </div>
+    <div class="profileErrorMessage">
+        {% if messages %}
+            {% for message in messages %}
+                {{ message.message }}
+            {% endfor %}
+        {% endif %}
+    </div>
+    <div>
+        <h1 class="profileChangeTitle">프로필 변경하기</h1>
+    </div>
+    <div class="profileChangeForm">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="Pform">
+                <label for="nickname">이름</label><br>
+                <input type="text" name="nickname" id="nickname" value="{{ nickname }}" required>
+            </div>
+            <div class="Pform">
+                <label for="studentId">학번/교번</label><br>
+                <input type="text" name="studentId" id="studentId" value="{{ studentId }}" required>
+            </div>
+            <div class="Pform">
+                <label for="username">아이디</label><br>
+                <input type="text" name="username" id="username" value="{{ username }}" required>
+            </div>
+            <div class="Pform">
+                <label for="email">이메일</label><br>
+                <input type="email" name="email" id="email" value="{{ email }}" required>
+            </div>
+            <div class="Pform">
+                교수자/학생 여부
+                <div>
+                    <input type="radio" name="position" id="position" value="professor" required>
+                    <label for="position">professor</label>
+                    <input type="radio" name="position" id="position" value="student">
+                    <label for="position">student</label>
+                </div>
+            </div><br>
+            <button type="submit" class="updateButton">수정하기</button>
+        </form>
+    </div>
+</body>
+</html>

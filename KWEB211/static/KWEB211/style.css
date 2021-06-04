@@ -1,0 +1,219 @@
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    color: black;
+}
+body {
+    margin:0;
+}
+.indexTopBar {
+    background-color: #862633;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    line-height: 70px;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    text-align: center;
+    font-size: x-large;
+}
+.indexBar {
+    align-content: center;
+}
+.loginTopBar {
+    background-color: #862633;
+    color: white;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+}
+.loginErrorMessage {
+    color: #862633;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+}
+.loginForm {
+    padding-left: 10px;
+}
+.profileTopBar{
+    background-color: #862633;
+    color: white;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+}
+.profileForm {
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    border: 2px solid black;
+    margin: 7px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 1px 1px gray;
+}
+.profileChangeTopBar {
+    background-color: #862633;
+    color: white;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+}
+.profileErrorMessage {
+    color: #862633;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+}
+.profileChangeForm {
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    border: 2px solid black;
+    margin: 7px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 1px 1px gray;
+}
+.Pform {
+    padding-bottom: 5px;
+}
+.lecturelistTopBar {
+    background-color: #862633;
+    color: white;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+}
+.lectureForm {
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    border: 2px solid black;
+    margin: 7px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 1px 1px gray;
+}
+
+.lectureForm a {
+    color: black;
+}
+
+.lectureForm a:hover {
+    color: #862633;
+}
+.previousLectureBar {
+    padding-left: 10px;
+    height: 70px;
+    line-height: 70px;
+}
+.lecturereadTopBar {
+    background-color: #862633;
+    color: white;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+}
+.lecturereadForm {
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    border: 2px solid black;
+    margin: 7px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 1px 1px gray;
+}
+.updateTopBar {
+    background-color: #862633;
+    color: white;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+}
+.updateForm {
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    border: 2px solid black;
+    margin: 7px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 1px 1px gray;
+}
+.updateForm a {
+    color: black;
+}
+.updateForm a:hover {
+    color: #862633;
+}
+.updateButton {
+    margin-left: 45px;
+}
+.profileChangeTitle {
+    padding-left: 10px;
+}
+.profileTitle {
+    padding-left: 10px;
+}
+.lecturelistTitle {
+    padding-left: 10px;
+}
+.lecturereadTitle {
+    padding-left: 10px;
+}
+.updateTitle {
+    padding-left: 10px;
+}
+
+.lecturePostWriteTopBar {
+    background-color: #862633;
+    color: white;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+}
+.lecturePostWriteForm {
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    margin: 7px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.lecturePostWriteTitle {
+    padding-left: 10px;
+}
+.signupTopBar {
+    background-color: #862633;
+    color: white;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+}
+.signupForm {
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    border: 2px solid black;
+    margin: 7px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 1px 1px gray;
+}
+.signupTitle {
+    padding-left: 10px;
+}
+.signupErrorMessage {
+    color: #862633;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+}

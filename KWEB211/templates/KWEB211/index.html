@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+    <link rel="stylesheet" href="{% static 'KWEB211/style.css' %}">
+</head>
+<body>
+    <div class="indexTopBar">
+        <div>
+            <a href="{% url 'index' %}">home </a>
+        </div>
+        {% if user.is_authenticated %}
+            <div class="indexBar">
+                <a href="{% url 'logout' %}">로그아웃 </a>
+            </div>
+            <div class="indexBar">
+                <a href="{% url 'profile' %}">프로필 </a>
+            </div>
+            <div class="indexBar">
+                <a href="{% url 'lecturelist' %}">강의목록 </a>
+            </div>
+            <div class="indexBar">
+                <a href="{% url 'update' %}">최근 업데이트 </a>
+            </div>
+            <div class="indexBar">
+                안녕하세요 {{ nickname }}님!
+            </div>
+        {% else %}
+            <div>
+                <a href="{% url 'login' %}">로그인</a>
+            </div>
+            <div>
+                <a href="{% url 'signup' %}">회원가입</a>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

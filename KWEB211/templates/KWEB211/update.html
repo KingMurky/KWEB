@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>최근 업데이트</title>
+    <link rel="stylesheet" href="{% static 'KWEB211/style.css' %}">
+</head>
+<body>
+    <div class="updateTopBar">
+        최근 업데이트 |
+        <a href="{% url 'index' %}">home</a>
+    </div>
+    <div class="updateTitle">
+        <h1>최근 업데이트</h1>
+    </div>
+    <div>
+        {% for date,name,title,content,lecture_id in filtered_lecture_id_list %}
+            <div class="updateForm">
+                <div>
+                    <a href="lectureread/{{ lecture_id }}">{{ name }}</a>
+                </div>
+                <div>
+                    {{ date }}
+                </div><br>
+                <div>
+                    {{ title }}
+                </div><br>
+                <div>
+                    {{ content|safe }}
+                </div><br>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
