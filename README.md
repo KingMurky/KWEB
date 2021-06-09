@@ -182,3 +182,15 @@ student111|feb5edce5782328f1ea520f56943e0a24b9c2a49dfffbb0b9b53abbf8f6d15e9|minj
 8|20
 9|21
 
+## Database Check
+데이터 베이스에 있는 데이터를 확인해보고 싶으시다면 아래 계정으로 로그인 하세요.
+
+학생 데이터
+|아이디|비밀번호|
+|:---:|:---:|
+staryunleegh|5020leegh@
+
+교수자 데이터
+|아이디|비밀번호|
+|:---:|:---:|
+teacher1|teacher111
